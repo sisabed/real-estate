@@ -38,13 +38,13 @@ export default function SignIn() {
         return;
       }
       dispatch(signInSuccess(data));
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       dispatch(signInFailure(error.message));
     }
   };
   return (
-    <div className="p-3 max-w-lg">
+    <div className="p-3 max-w-l mx-auto">
       <h1 className="text-3xl text-center font-semibold my-7">Sign In</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
