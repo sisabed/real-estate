@@ -150,7 +150,7 @@ export default function Profile() {
       });
       const data = await res.json();
       if (data.success === false) {
-        console.lof(data.message);
+        console.log(data.message);
         return;
       }
 
@@ -280,7 +280,9 @@ export default function Profile() {
                 >
                   Delete
                 </button>
-                <button className="text-green-700 uppercase">Edit</button>
+                <Link to={`/update-listing/${listing._id}`}>
+                  <button className="text-green-700 uppercase">Edit</button>
+                </Link>
               </div>
             </div>
           ))}
